@@ -8,24 +8,23 @@ import static org.junit.Assert.assertEquals;
 
 public class SortingTest {
     private ArrayList<Integer> originalArray, expectedArray, actualArray, arrayToOperate;
-    private int capacity;
 
     @Before
     public void init() {
-        capacity = 50;
+        int capacity = 50;
         originalArray = Generic.arrayRandom(capacity);
         expectedArray = new ArrayList<>(capacity);
         arrayToOperate = new ArrayList<>(capacity);
     }
 
-    void fillArrays() {
+    public void fillArrays() {
         Collections.copy(originalArray, expectedArray);
         Collections.copy(originalArray, arrayToOperate);
     }
 
 
     @Test
-    public void ArraySortTest() {
+    public void arraySortTest() {
         ArraySort arrSort = new ArraySort();
         fillArrays();
         Collections.sort(expectedArray);

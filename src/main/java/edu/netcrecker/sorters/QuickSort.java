@@ -18,7 +18,8 @@ public class QuickSort extends Sort {
     private ArrayList<Integer> doSort(ArrayList<Integer> array, int start, int end) {
         if (start >= end)
             return array;
-        int i = start, j = end;
+        int i = start,
+                j = end;
         int cur = i - (i - j) / 2;
         while (i < j) {
             while (i < cur && (array.get(i) <= array.get(cur))) {

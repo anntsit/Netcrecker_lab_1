@@ -6,11 +6,11 @@ public class ExchangeSort extends Sort {
     @Override
     public ArrayList<Integer> sort(ArrayList<Integer> array) {
         ArrayList<Integer> arr = (ArrayList<Integer>)array.clone();
-        int  key, j;
+        int  key;
         for (int i = 1; i < arr.size(); i++)
         {
             key = arr.get(i);
-            j = i-1;
+            int j = i - 1;
 
             while (j >= 0 && arr.get(j) > key)
             {
